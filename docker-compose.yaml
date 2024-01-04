@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql-stakepad
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: stakepad
+      DEFAULT_AUTHENTICATION_PLUGIN: mysql_native_password
+    ports:
+      - "3306:3306"
